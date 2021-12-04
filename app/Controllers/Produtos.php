@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Models\ProdutoModel;
 use CodeIgniter\Controller;
-
 class Produtos extends Controller
 {
     public function index()
@@ -45,15 +42,52 @@ class Produtos extends Controller
     {
         echo "Novo produto";
     }
-
     public function model()
     {
+        echo "Esse dados ven da model(banco de dados  ou migration)";
         $produto_model = new ProdutoModel();
+        //busca
+        // $produto = $produto_model->findAll();// first , insert, updated, delete
 
-        $produto = $produto_model->findAll();
+        // busca id
+       // $produto = $produto_model->where('id_produto', 1)->first();//  insert, updated, delete
 
-        dd($produto);
+        //inseri 
+        // $produto_model->insert([
+        //     'nome'  =>'produto texte',
+        //     'descricao' =>'produto Novo',
+        //     'valor_de_compra' => 199,
+        //     'valor_de_venda' => 500,
+        //     'quantidade'       =>10,
+        //     'validade'       => ''
+
+        // ]);//   updated, delete
+       // dd($produto_model);
+
+            // atualiza
+        
+        //     $dados = [
+        //         'nome'          => "IPHONE I7",
+        //         'descricao'      => "Produto ",
+        //         'valor_de_compra' => 3099.99,
+        //         'valor_de_venda' => 17899.90,
+        //         'quantidade'     => 2,
+        //         'validade'       => '2090'
+        
+        //         ];
+        // $produto_model
+        // ->where('id_produto', 4)
+        // ->set($dados)// esse set e doados    
+        // ->update(); // delete
+
+        // DELETE 
+
+            
+
+            $produto_model
+            ->where('id_produto', 4)
+            ->delete();
+
+      //  dd($produto);
     }
-
-
 }

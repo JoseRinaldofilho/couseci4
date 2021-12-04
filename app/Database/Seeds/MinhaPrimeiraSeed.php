@@ -10,11 +10,11 @@ class MinhaPrimeiraSeed extends Seeder
     {
         // infrima a tabela qeu quer trabalhar depois inserte
         $this->db->table('produtos')->insert([
-        'nome'                 => 'notebook',
+        'nome'                 => 'MecBook',
         'descricao'          => 'Descrição do produto para nossa primeira seed',
-        'valor_de_compra'   => 1299.90,
-        'valor_de_venda'    => 199.90,
-        'quantidade'        => 9,
+        'valor_de_compra'   => 9299.90,
+        'valor_de_venda'    => 1599.90,
+        'quantidade'        => 1,
         'validade'          => '',
         ]); // passa um array
     }
